@@ -8,7 +8,7 @@ def fibonacci(n):
 
 
 def main():
-    n = 10  # You can modify or make dynamic
+    n = int(input())  # You can modify or make dynamic
     print("Hello, World!")
     fib_series = fibonacci(n)
 
