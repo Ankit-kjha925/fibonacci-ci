@@ -1,3 +1,5 @@
+import os
+
 def fibonacci(n):
     series = []
     a, b = 0, 1
@@ -8,7 +10,9 @@ def fibonacci(n):
 
 
 def main():
-    n = int(input())  # You can modify or make dynamic
+    # Read from environment variable (default = 10)
+    n = int(os.getenv("N", 10))
+
     print("Hello, World!")
     fib_series = fibonacci(n)
 
