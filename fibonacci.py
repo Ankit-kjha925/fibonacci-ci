@@ -22,7 +22,6 @@ def main():
         "fibonacci": fib_series
     }
 
-
 if __name__ == "__main__":
     result = main()
     print(result)
