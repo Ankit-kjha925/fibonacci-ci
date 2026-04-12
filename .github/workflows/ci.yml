@@ -10,6 +10,9 @@ jobs:
   run-python:
     runs-on: ubuntu-latest
 
+    env:
+      N: 20
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -26,13 +29,9 @@ jobs:
 
       - name: Run Fibonacci Script
         run: python fibonacci.py
-        env:
-          N: 20 # 🔹 Change this value anytime
 
       - name: Generate Report
         run: python generate_report.py
-        env:
-          N: 10 # 🔹 Keep consistent
 
       - name: Upload Report Artifact
         uses: actions/upload-artifact@v4
